@@ -40,7 +40,7 @@ public class StringUtilities {
      * @return the last 3 characters of `input`
      */
     public static String getSuffix(String input){
-        return input.length()-3;
+        return null;
     }
 
     /**
@@ -49,7 +49,7 @@ public class StringUtilities {
      * @return the equivalence of two strings, `inputValue` and `comparableValue`
      */
     public static Boolean compareTwoStrings(String inputValue, String comparableValue){
-        return null;
+        return inputValue.equals(comparableValue);
     }
 
     /**
