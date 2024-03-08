@@ -28,7 +28,8 @@ public class PredicateUtilities {
      * @return true if `x` is greater than or equal to `y`
      */
     public Boolean isGreaterThanOrEqualTo(int x, int y) {
-        return x <= y;
+
+        return x >= y;
     }
 
     /**

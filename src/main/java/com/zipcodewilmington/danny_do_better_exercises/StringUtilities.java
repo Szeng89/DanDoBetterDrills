@@ -1,5 +1,7 @@
 package com.zipcodewilmington.danny_do_better_exercises;
 
+import org.w3c.dom.DOMStringList;
+
 /**
  * Created by dan on 6/14/17.
  */
@@ -40,7 +42,8 @@ public class StringUtilities {
      * @return the last 3 characters of `input`
      */
     public static String getSuffix(String input){
-        return null;
+        //use substring method to extract a portion of a string starting from specified index
+        return input.substring(input.length()-3);
     }
 
     /**
@@ -57,15 +60,22 @@ public class StringUtilities {
      * @return the middle character of `inputValue`
      */
     public static Character getMiddleCharacter(String inputValue){
-        return null;
+        return inputValue.charAt((inputValue.length()-1)/2);
+
+//        int stringLength = inputValue.length();
+//        int middle = stringLength/2;
+//        char answer = inputValue.charAt(middle);
+//        return answer;
     }
 
     /**
      * @param spaceDelimitedString a string, representative of a sentence, containing spaces
      * @return the first sequence of characters
      */
-    public static String getFirstWord(String spaceDelimitedString){
-        return null;
+    public static String getFirstWord(String spaceDelimitedString) {
+        String[] words = spaceDelimitedString.split(" ");
+        return words[0];
+
     }
 
     /**
@@ -73,7 +83,8 @@ public class StringUtilities {
      * @return the second word of a string delimited by spaces.
      */
     public static String getSecondWord(String spaceDelimitedString){
-        return null;
+        String[] words = spaceDelimitedString.split(" ");
+        return words[1];
     }
 
     /**
@@ -81,6 +92,14 @@ public class StringUtilities {
      * @return an identical string with characters in reverse order.
      */
     public static String reverse(String stringToReverse){
-        return null;
+        //stringbuild object and put in stringToReverse
+        StringBuilder stringbuild = new StringBuilder(stringToReverse);
+
+        //reverse the new object
+        stringbuild.reverse();
+
+        //assign the tostring to new string then return
+        String reversed = stringbuild.toString();
+        return reversed;
     }
 }
